@@ -1,8 +1,10 @@
 #pragma once
 
+#include "Library/HostIO/HioNode.h"
+
 namespace al {
 
-class ExecutorListBase {
+class ExecutorListBase : public HioNode {
 public:
     ExecutorListBase(const char* name);
 

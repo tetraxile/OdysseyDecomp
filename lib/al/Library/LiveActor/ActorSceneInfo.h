@@ -20,7 +20,7 @@ class ScreenCoverCtrl;
 class ShadowDirector;
 class ModelGroup;
 class GraphicsSystemInfo;
-class ModelDrawBufferCounter;
+struct ModelDrawBufferCounter;
 
 struct ActorSceneInfo {
     AreaObjDirector* mAreaObjDirector;

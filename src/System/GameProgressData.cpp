@@ -209,28 +209,28 @@ s32 GameProgressData::calcNextLockedWorldNumForWorldMap() const {
         return 1;
 }
 
-s32 GameProgressData::calcNextLockedWorldIdForWorldMap(s32 idx) const {
-    switch (mUnlockWorldNum) {
-    case 3:
-        return idx == 0 ? GameDataFunction::getWorldIndexForest() :
-                          GameDataFunction::getWorldIndexLake();
-    case 4:
-        return isUnlockFirstForest() ? GameDataFunction::getWorldIndexLake() :
-                                       GameDataFunction::getWorldIndexForest();
-    case 5:
-        return GameDataFunction::getWorldIndexCity();
-    case 8:
-        return idx != 0 ? GameDataFunction::getWorldIndexSnow() :
-                          GameDataFunction::getWorldIndexSea();
-    case 9:
-        return isUnlockFirstSea() ? GameDataFunction::getWorldIndexSea() :
-                                    GameDataFunction::getWorldIndexSnow();
-    case 11:
-        return GameDataFunction::getWorldIndexSky();
-    default:
-        return mUnlockWorldNum;
-    }
-}
+// s32 GameProgressData::calcNextLockedWorldIdForWorldMap(s32 idx) const {
+//     switch (mUnlockWorldNum) {
+//     case 3:
+//         return idx == 0 ? GameDataFunction::getWorldIndexForest() :
+//                           GameDataFunction::getWorldIndexLake();
+//     case 4:
+//         return isUnlockFirstForest() ? GameDataFunction::getWorldIndexLake() :
+//                                        GameDataFunction::getWorldIndexForest();
+//     case 5:
+//         return GameDataFunction::getWorldIndexCity();
+//     case 8:
+//         return idx != 0 ? GameDataFunction::getWorldIndexSnow() :
+//                           GameDataFunction::getWorldIndexSea();
+//     case 9:
+//         return isUnlockFirstSea() ? GameDataFunction::getWorldIndexSea() :
+//                                     GameDataFunction::getWorldIndexSnow();
+//     case 11:
+//         return GameDataFunction::getWorldIndexSky();
+//     default:
+//         return mUnlockWorldNum;
+//     }
+// }
 
 bool GameProgressData::isUnlockFirstForest() const {
     if (mUnlockWorldStatusFirstBranch == FirstBranch::None ||

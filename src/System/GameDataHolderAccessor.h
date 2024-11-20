@@ -1,19 +1,21 @@
 #pragma once
 
+#include "System/GameDataHolderWriter.h"
+
 namespace al {
 class IUseSceneObjHolder;
 class SceneObjHolder;
-class ISceneObj;
 class LiveActor;
 }  // namespace al
 
-class GameDataHolderAccessor {  // maybe extends GameDataHolderWriter?
-public:
-    GameDataHolderAccessor(const al::IUseSceneObjHolder*);
-    GameDataHolderAccessor(const al::SceneObjHolder*);
+class GameDataHolder;
 
-private:
-    al::ISceneObj* mSceneObj;
+class GameDataHolderAccessor : public GameDataHolderWriter {
+public:
+    GameDataHolderAccessor(const al::IUseSceneObjHolder* holder);
+    GameDataHolderAccessor(const al::SceneObjHolder* holder);
+
+    GameDataHolderAccessor(GameDataHolder* data) : GameDataHolderWriter(data) {}
 };
 
 namespace rs {

@@ -11,7 +11,7 @@ namespace al {
 class ExecutorListFunctor : public ExecutorListBase {
 public:
     ExecutorListFunctor(const char* name, s32 size);
-    ~ExecutorListFunctor();
+    ~ExecutorListFunctor() override;
     void executeList() const override;
     bool isActive() const override;
 

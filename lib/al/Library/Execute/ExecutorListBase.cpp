@@ -4,6 +4,4 @@ namespace al {
 
 ExecutorListBase::ExecutorListBase(const char* name) : mName(name){}
 
-ExecutorListBase::~ExecutorListBase(){};
-
 }

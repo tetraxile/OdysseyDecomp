@@ -36,7 +36,7 @@ class ScreenCoverCtrl;
 class ShadowDirector;
 class ModelGroup;
 class GraphicsSystemInfo;
-class ModelDrawBufferCounter;
+struct ModelDrawBufferCounter;
 class ActorFactory;
 class ActorResource;
 class ActorResourceHolder;

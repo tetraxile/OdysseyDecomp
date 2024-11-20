@@ -23,20 +23,14 @@ public:
     void initResource();
     void createMatAnimForProgram(s32);
 
+    const char* getName() const { return mName; }
     ModelCtrl* getModelCtrl() const { return mModelCtrl; }
-
     AnimPlayerSkl* getAnimSkl() const { return mAnimSkl; }
-
     AnimPlayerMat* getAnimMtp() const { return mAnimMtp; }
-
     AnimPlayerMat* getAnimMts() const { return mAnimMts; }
-
     AnimPlayerMat* getAnimMcl() const { return mAnimMcl; }
-
     AnimPlayerMat* getAnimMat() const { return mAnimMat; }
-
     AnimPlayerVis* getAnimVis() const { return mAnimVis; }
-
     AnimPlayerVis* getAnimVisForAction() const { return mAnimVisForAction; }
 
 private:

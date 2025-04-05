@@ -15,7 +15,7 @@ public:
     s32 getNpadId() const;
     void setAnyControllerMode();
     void setIndexControllerMode(s32 idx);
-    nn::hid::VibrationDeviceHandle* getVibrationDeviceHandle(s32 idx) const;
+    const nn::hid::VibrationDeviceHandle& getVibrationDeviceHandle(s32 idx) const;
 
 private:
     void calcImpl_() override;

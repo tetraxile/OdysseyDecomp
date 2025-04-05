@@ -1,7 +1,7 @@
 #include "Library/Controller/NpadController.h"
 
+#include <controller/nin/seadNinJoyNpadDevice.h>
 #include <controller/seadControllerMgr.h>
-#include "controller/nin/seadNinJoyNpadDevice.h"
 
 namespace al {
 
@@ -32,12 +32,10 @@ void NpadController::setIndexControllerMode(s32 idx) {
     mControllerMode = idx;
 }
 
-nn::hid::VibrationDeviceHandle* NpadController::getVibrationDeviceHandle(s32 idx) const {
+const nn::hid::VibrationDeviceHandle& NpadController::getVibrationDeviceHandle(s32 idx) const {
     auto* device = sead::ControllerMgr::instance()->getControlDeviceAs<sead::NinJoyNpadDevice*>();
 
-    sead::NinJoyNpadDevice::NpadState& state = device->getNpadState(mNpadId);
-
-    return &state.mVibrationDeviceHandles[idx];
+    return device->getNpadState(mNpadId).mVibrationDeviceHandles[idx];
 }
 
 }  // namespace al

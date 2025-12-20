@@ -16,7 +16,7 @@ class PlacementInfo;
 namespace alCameraPoserFunction {
 class CameraCollisionHitResult;
 
-void getViewIndex(const al::CameraPoser*);
+s32 getViewIndex(const al::CameraPoser*);
 sead::LookAtCamera* getLookAtCamera(const al::CameraPoser*);
 void getProjectionSead(const al::CameraPoser*);
 void getProjection(const al::CameraPoser*);

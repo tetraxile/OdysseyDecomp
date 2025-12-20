@@ -30,7 +30,7 @@ private:
     f32 mDegreeMargin = 40.0f;
     f32 mAngleElevation = 20.0f;
     f32 mAngleElevation2 = 20.0f;
-    s32 mAngleElevationIterpStep = 60;
+    s32 mAngleElevationInterpStep = 60;
     s32 mAngleElevationResetStep = 60;
     f32 mCameraDistance = 2000.0f;
     f32 mCameraDistanceMin = 250.0f;

@@ -4,7 +4,8 @@
 
 namespace al {
 
-PartsGraphics::PartsGraphics(GraphicsSystemInfo* gfxSysInfo) : mListNode(this) {
+PartsGraphics::PartsGraphics(GraphicsSystemInfo* gfxSysInfo)
+    : sead::TListNode<PartsGraphics*>(this) {
     gfxSysInfo->registPartsGraphics(this);
 }
 

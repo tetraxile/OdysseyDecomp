@@ -8,12 +8,9 @@ namespace al {
 
 class GraphicsSystemInfo;
 
-class PartsGraphics : public IUsePartsGraphics {
+class PartsGraphics : public IUsePartsGraphics, public sead::TListNode<PartsGraphics*> {
 public:
     PartsGraphics(GraphicsSystemInfo* gfxSysInfo);
-
-private:
-    sead::TListNode<PartsGraphics*> mListNode;
 };
 
 static_assert(sizeof(PartsGraphics) == 0x28);

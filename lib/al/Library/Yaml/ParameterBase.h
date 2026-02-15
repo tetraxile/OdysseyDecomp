@@ -122,7 +122,7 @@ public:
         *getMutableValuePtr<T>() = value;
     }
 
-protected:
+private:
     template <typename T>
     bool isEqual_(const ParameterBase& parameter) const;
 

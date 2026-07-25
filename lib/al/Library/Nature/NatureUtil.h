@@ -34,8 +34,9 @@ const char* getFireMaterialCode(const LiveActor*);
 
 bool calcFindWaterSurface(sead::Vector3f*, sead::Vector3f*, const LiveActor*, const sead::Vector3f&,
                           const sead::Vector3f&, f32);
-bool calcFindWaterSurfaceFlat(sead::Vector3f*, sead::Vector3f*, const LiveActor*,
-                              const sead::Vector3f&, const sead::Vector3f&, f32);
+bool calcFindWaterSurfaceFlat(sead::Vector3f* surfacePos, sead::Vector3f* surfaceNormal,
+                              const LiveActor* actor, const sead::Vector3f& trans,
+                              const sead::Vector3f& gravity, f32 radius);
 bool calcFindWaterSurfaceDisplacement(sead::Vector3f*, sead::Vector3f*, const LiveActor*,
                                       const sead::Vector3f&, const sead::Vector3f&, f32);
 bool calcFindWaterSurfaceOverGround(sead::Vector3f*, sead::Vector3f*, const LiveActor*,

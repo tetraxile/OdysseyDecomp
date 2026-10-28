@@ -135065,7 +135065,7 @@ Scene/ProjectActorFactory.o:
   - offset: 0x4ba1f8
     size: 52
     label: _ZN2al19createActorFunctionI14PeachWorldGateEEPNS_9LiveActorEPKc
-    status: NotDecompiled
+    status: Matching
     lazy: true
   - offset: 0x4ba22c
     size: 52
